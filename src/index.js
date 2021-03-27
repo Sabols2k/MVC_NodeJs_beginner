@@ -8,6 +8,7 @@ const port = 3000;
 const route = require('./routes');
 const db = require('./config/db');
 
+
 //Connect to DB
 
 db.connect();
@@ -33,7 +34,7 @@ app.engine(
   }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources','views'));
+app.set('views', path.join(__dirname, 'resources','views')); // chỉnh sửa thư mục Views để render như ý muốn của mình
 
 //route init
 route(app);
